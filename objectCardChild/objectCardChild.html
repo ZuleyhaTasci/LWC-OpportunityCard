@@ -1,0 +1,16 @@
+<template>
+    <lightning-card>
+        <template if:true={lstOfRecs}>
+            <template for:each={lstOfRecs} for:item="rec">
+                <div class="slds-box slds-box-xx_small" key={rec.Id}>
+                    <p><strong>Opportunity Name: </strong>{rec.Name}</p>
+                    <p><strong>Account Name: </strong>{rec.Account.Name}</p>
+                    <p><strong>Stage: </strong>{rec.StageName}</p>
+                    <p><strong>Close Date: </strong>{rec.CloseDate}</p>
+                    <p><strong>Amount: </strong>{rec.Amount}</p>
+                    <p><strong>Days Remaining to Close: </strong>{rec.DaysRemaingToClose}</p>
+                </div>
+            </template>
+        </template>
+    </lightning-card>
+</template>
